@@ -4,6 +4,7 @@ import 'package:mryt_flutter_anim_demo/pages/demo_physical_anim_page.dart';
 import 'package:mryt_flutter_anim_demo/pages/demo_third_anim_page.dart';
 
 import 'anim/hero/demo_animlist_page.dart';
+import 'anim/hero/demo_drag_page.dart';
 import 'anim/hero/demo_hero_anim.dart';
 import 'anim/third/demo_flare_anim_page.dart';
 import 'anim/third/demo_lottie_anim_page.dart';
@@ -32,12 +33,13 @@ class MyApp extends StatelessWidget {
         '/rotateAnim': (BuildContext context) => RotateAnim(), // 旋转
         '/scaleAnim': (BuildContext context) => ScaleAnim(), // 缩放
         '/fadeAnim': (BuildContext context) => FadeAnim(), // 渐隐渐现
-        '/nonlinearAnim':(BuildContext context) => NonlinearAnim(),// 线性曲线动画
+        '/nonlinearAnim':(BuildContext context) => NonlinearAnim(),// 非线性曲线动画
         '/animWidgetPage':(BuildContext context) => AnimWidgetPage(),// 自定义动画Widget
         '/combinationAnimPage':(BuildContext context) => CombinationAnimPage(),// 组合动画
         '/customAnimBuildPage':(BuildContext context) => CustomAnimBuildPage(),// 自定义
         '/animatedListSample':(BuildContext context) => AnimatedListSample(),// 列表动画
         '/heroAnimation':(BuildContext context) => HeroAnimation(),// 共享元素动画
+        '/dragAnimPage':(BuildContext context) => DragAnimPage(),// 拖拽动画
         '/lottieAnimPage':(BuildContext context) => LottieAnimPage(),// 第三方  airbnb  lottie
         '/flareAnimPage':(BuildContext context) => FlareAnimPage(),// 第三方  flare
       },

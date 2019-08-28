@@ -24,6 +24,13 @@ class PhysicalAnimDemo extends StatelessWidget {
             textColor: Colors.black87,
             child: Text("共享元素动画"),
           ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/dragAnimPage');
+            },
+            textColor: Colors.black87,
+            child: Text("拖拽动画"),
+          ),
         ],
       ),
     );

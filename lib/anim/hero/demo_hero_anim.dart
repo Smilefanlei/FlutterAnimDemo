@@ -42,19 +42,6 @@ Widget getHeroAnim2(ItemModel itemModel) {
   );
 }
 
-const List<StaggeredTile> _tiles = const <StaggeredTile>[
-  const StaggeredTile.count(2, 2),
-  const StaggeredTile.count(1, 1),
-  const StaggeredTile.count(1, 2),
-  const StaggeredTile.count(1, 1),
-  const StaggeredTile.count(2, 1),
-  const StaggeredTile.count(2, 2),
-  const StaggeredTile.count(1, 1),
-  const StaggeredTile.count(1, 1),
-  const StaggeredTile.count(1, 1),
-  const StaggeredTile.count(1, 1),
-];
-
 List<ItemModel> myData = <ItemModel>[
   ItemModel(
       title: '啦啦啦1111',
@@ -135,21 +122,22 @@ class ItemView extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(6)),
                 color: Colors.white),
             child: Hero(
-                // 一个viewTree下面不能有相同的
-                tag: model.imgUrl,
-                child: Material(
-                  color: Colors.transparent,
-                  child: Column(
-                    children: <Widget>[
-                      Expanded(
-                          child: Image.network(
-                        model.imgUrl,
-                        fit: BoxFit.cover,
-                      )),
-                      Text(model.title),
-                    ],
-                  ),
-                )),
+              // 一个viewTree下面不能有相同的
+              tag: model.imgUrl,
+              child: Material(
+                color: Colors.transparent,
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                        child: Image.network(
+                      model.imgUrl,
+                      fit: BoxFit.cover,
+                    )),
+                    Text(model.title),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
       ),
